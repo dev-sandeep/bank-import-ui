@@ -1,0 +1,159 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #09d3ac;
+}
+
+nav {
+    width: 100vw;
+    background-color: #00060a;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+body {
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+    margin: 0 2vw;
+    padding: 11px;
+    background: none;
+    text-align: left;
+}
+
+.icon svg{
+    height: 20px;
+}
+
+.icon {
+    font-weight: bold;
+    position: relative;
+    left: 10%;
+}
+
+.select-comp {
+    position: absolute;
+    right: 10%;
+}
+
+.select-opt {
+    width: 150px;
+}
+
+.outer {
+    display: flex;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.half {
+    width: 50%;
+}
+
+.left-img {
+    margin-top: 32%
+}
+
+.start-form{
+    margin-top: 26%;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.title-icon{
+    width:200px;
+}
+
+.detail-text{
+    margin-top: 3%;
+    font-size: 1.5em;
+    display: block;
+    font-weight: 200;
+    margin-bottom:3%; 
+    width: 400px;
+}
+
+.block-display{
+    display: block;
+}
+
+.form-elems input, textarea{
+    width: 400px;
+    padding: 4px;
+    margin-bottom: 10px;
+}
+
+.form-elems label{
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.submit-btn{
+    background: #48baa2;
+    color: #fff;
+    width: 100px;
+    text-transform: uppercase;
+}
+
+.process-page-left{
+    margin-top: 3%;
+    text-align: left;
+}
+
+.process-page-left table{
+    width:90%;
+}
+.process-page-left .th, td {
+    padding: 10px;
+    text-align: left;
+  }
+
+.process-page-left .title{
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+.btn-no-css{
+    background: none;
+    border: 0px;
+}
+
+.modal-body{
+    text-align: left;
+}
+
+.modal-body .modal-title{
+    font-size: 1.8em;
+    font-weight: 100;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+
+.modal-body input{
+    width: 300px;
+    margin: 4px 1px;
+}
