@@ -4,8 +4,10 @@ import React, { useState, useEffect, setState } from 'react'
 import UseBaseContext from './../ContextApi/UseBaseContext'
 import UriCall from './../ContextApi/UrlCall'
 import WarnIcon from './WarnIcon'
+import { convertPrice } from './../Utility/Utility'
 
 import Modal, { closeStyle } from 'simple-react-modal'
+import { STATUS_PROCESS } from '../Utility/Constants'
 
 function Table() {
     const [modalVisibility, setModalVisibility] = useState(false);
@@ -18,7 +20,7 @@ function Table() {
         setModalVisibility(false);
     }
 
-    const closeConfirmDialog = ()=>{
+    const closeConfirmDialog = () => {
         setConfirmModalVisibility(false);
     }
 
@@ -44,7 +46,7 @@ function Table() {
                     "id": selectedRow.id,
                     "date": selectedRow.fromDate,
                     "text": selectedRow.details,
-                    "amount": parseFloat(selectedRow.amount.split(",").join('.').split(" ").join(''))
+                    "amount": parseFloat(convertPrice(selectedRow.amount))
                 }
             ]
         }
@@ -53,7 +55,7 @@ function Table() {
                 setConfirmModalVisibility(true);
             } else {
                 setModalVisibility(true);
-               
+
             }
         });
 
@@ -67,13 +69,13 @@ function Table() {
                 "id": localData.id,
                 "date": localData.fromDate,
                 "text": localData.details,
-                "amount": parseFloat(localData.amount.split(",").join('.').split(" ").join(''))
+                "amount": parseFloat(convertPrice(localData.amount))
             }
         ];
 
-        postCall(param,'').then((resp) => {
+        postCall(param, '').then((resp) => {
             setData(resp, "mainData");
-            setData(2, "appStatus");
+            setData(STATUS_PROCESS, "appStatus");
             //close the modal
             closeModal();
 
@@ -151,11 +153,11 @@ function Table() {
                             {tblData.rows.map((item, key) => (
                                 <tr key={key}>
                                     <td>{item.index}</td>
-                                    <td>{item.cells[0].cleanedValue || 'NA'}</td>
-                                    <td>{item.cells[1].cleanedValue || 'NA'}</td>
+                                    <td className="text-small">{item.cells[0].cleanedValue || 'NA'}</td>
+                                    <td className="text-small">{item.cells[1].cleanedValue || 'NA'}</td>
                                     <td>{item.cells[2].cleanedValue || 'NA'}</td>
-                                    <td>{item.cells[3].cleanedValue || 'NA'}</td>
-                                    <td>{item.cells[4].cleanedValue || 'NA'}</td>
+                                    <td>{item.cells[3].cleanedValue.replace(/ /g, '') || 'NA'}</td>
+                                    <td>{item.cells[4].cleanedValue.replace(/ /g, '') || 'NA'}</td>
                                     <td>
                                         <button className='btn-no-css' onClick={() => clickStatus.apply(this, [item, key])}>  <WarnIcon /></button>
                                     </td>

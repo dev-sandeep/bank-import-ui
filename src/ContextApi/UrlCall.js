@@ -2,8 +2,10 @@ import Axios from 'axios'
 import UseBaseContext from './../ContextApi/UseBaseContext'
 
 function UrlCall() {
-    const { setShowMovies } = UseBaseContext();
-    const BASE_URL = 'https://bokiotestbankapi.azurewebsites.net/api/apple/Transactions/';
+    const { setData, getData } = UseBaseContext();
+    let companyName = 'apple';
+
+    const BASE_URL = 'https://bokiotestbankapi.azurewebsites.net/api/' + companyName + '/Transactions/';
 
     function getCall() {
         let url = BASE_URL;

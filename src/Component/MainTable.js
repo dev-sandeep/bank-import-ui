@@ -1,11 +1,7 @@
 
 
-import React, { useState, useEffect, setState } from 'react'
+import React from 'react'
 import UseBaseContext from '../ContextApi/UseBaseContext'
-import UriCall from '../ContextApi/UrlCall'
-import WarnIcon from './WarnIcon'
-
-import Modal, { closeStyle } from 'simple-react-modal'
 
 function MainTable() {
     const { setData, getData } = UseBaseContext();
@@ -16,7 +12,7 @@ function MainTable() {
     return (
         <section className="table-copmponent">
             <div className="process-page-left">
-                <p className="title">Final Data</p>
+                <p className="title">Final Data [Apple]</p>
 
                 <div className="processed-tbl">
                     <table border="1" className="tbl tbl-standard">

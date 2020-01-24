@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import BrandLogo from './../Component/BrandLogo'
 import UseBaseContext from './../ContextApi/UseBaseContext'
 import UriCall from './../ContextApi/UrlCall'
+import {STATUS_TRANSACTION} from '../Utility/Constants'
 function Header() {
     /* get the context instance */
     const { setData, getData } = UseBaseContext();
@@ -11,7 +12,7 @@ function Header() {
         getCall('').then(function (resp) {
             setData(resp, "mainData");
             //changing the app status, based on which the content will load in home page
-            setData(3, "appStatus");
+            setData(STATUS_TRANSACTION, "appStatus");
         });
     }
 

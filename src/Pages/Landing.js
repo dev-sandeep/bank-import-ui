@@ -1,4 +1,4 @@
-import React, { useState, useEffect, setState } from 'react'
+import React, { useState, useEffect } from 'react'
 import UseBaseContext from './../ContextApi/UseBaseContext'
 import UriCall from './../ContextApi/UrlCall'
 import MainForm from '../Component/MainForm'
@@ -6,9 +6,8 @@ import DefaultImg from '../Component/DefaultImg'
 
 function Landing() {
     /* get the context instance */
-    const { getData } = UseBaseContext();
     const { defaultCall } = UriCall();
-    const [data, setData] = useState([]);
+    const [setData] = useState([]);
 
     /* load the data by default */
     useEffect(() => {

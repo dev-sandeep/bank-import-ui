@@ -125,9 +125,9 @@ li {
 }
 
 .process-page-left table{
-    width:90%;
+    width:95%;
 }
-.process-page-left .th, td {
+.process-page-left .th, td, th {
     padding: 10px;
     text-align: left;
   }
@@ -156,4 +156,8 @@ li {
 .modal-body input{
     width: 300px;
     margin: 4px 1px;
+}
+
+.text-small{
+    font-size: small;
 }

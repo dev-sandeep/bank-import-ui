@@ -1,10 +1,12 @@
-import Axios from 'axios';
-import UseBaseContext from '../ContextApi/UseBaseContext'
-
 function limitString(string, limit) {
     return string.substring(string, limit);
 }
 
+function convertPrice(price){
+    return parseFloat(price.split(",").join('.').split(" ").join(''))
+}
+
 export {
-    limitString
+    limitString,
+    convertPrice
 }

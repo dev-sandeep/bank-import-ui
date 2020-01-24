@@ -1,4 +1,4 @@
-import React, { useState, useEffect, setState } from 'react'
+import React, { useState, useEffect } from 'react'
 import UseBaseContext from './../ContextApi/UseBaseContext'
 import UriCall from './../ContextApi/UrlCall'
 import MainForm from '../Component/MainForm'
@@ -6,9 +6,9 @@ import Table from '../Component/Table'
 
 function Process() {
     /* get the context instance */
-    const { getData } = UseBaseContext();
+    // const { getData } = UseBaseContext();
     const { defaultCall } = UriCall();
-    const [data, setData] = useState([]);
+    const [setData] = useState([]);
 
     /* load the data by default */
     useEffect(() => {
