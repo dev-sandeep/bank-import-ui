@@ -18,6 +18,7 @@ This is app is only supported laptop/Computer, Its not responsive yet.
 /**************************************/ 
 
 Possible Imporovements:
+==Quality==
 * Make the application responsive(Mobile/Table compatible)
 * Better struturing of the code
 * Use of routers instead of conditional loading of fragments/Component
@@ -27,3 +28,11 @@ Possible Imporovements:
 * Better notification mechanism 
 * Unit testing with JEST
 * Deploying the build to a node server using JENKIN pipeline
+* Accessibility tests
+
+==Functionality==
+* Instead of a split app, may be use of a multi-page would have better(especially in smaller screens)
+* Error/Success message with proper notifications
+* Message to show, there is no data available
+* Better color schemes for the entire application
+* More information could be displayed, which is there in the JSON response, eg: Bank account information
